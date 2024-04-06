@@ -1,5 +1,6 @@
 
 from unidecode import unidecode
+import os
 import torch
 import numpy as np
 from utils import load_wav_to_torch
@@ -22,6 +23,7 @@ from librosa.filters import mel as librosa_mel_fn
 from audio_processing import dynamic_range_decompression
 
 avs = glob.glob('wavs/*.wav')
+directory = 'E:\Github\F-voice\F-VOICE\Mel_creator\wavs_mel'
 
 for i in range(len(avs)):
     audio, sampling_rate = load_wav_to_torch(avs[i])
@@ -107,6 +109,8 @@ for i in range(len(avs)):
     mel_output = dynamic_range_decompression(magnitude)
     mel_output = torch.squeeze(mel_output, 0).cpu().numpy()
     print(mel_output)
-    ruta_archivo_npy = 'Test/tacotron2-master/tacotron2-master/wavs_mel' + avs[i].replace('.wav', '') + '.npy'
+    file_name = avs[i].replace('wavs\\', '').replace('.wav', '')
+    file_path = os.path.join(directory, file_name)
+    np.save(file_path, mel_output)
     np.save(avs[i].replace('.wav', ''), mel_output)
     print(i)
