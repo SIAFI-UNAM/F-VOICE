@@ -1,5 +1,6 @@
 import whisper
 import os
+import tqdm
 
 def voice_to_text(inpath,outpath,model = "base",language = "english"):
     """
@@ -17,18 +18,20 @@ def voice_to_text(inpath,outpath,model = "base",language = "english"):
     language : str
         The language to be used. It can be either 'english' or 'spanish'.
     """
+    print("Starting...")
     # Charge the pre-trained model
     model = whisper.load_model(model)
     model.language = language
     # list for saving results
     results = []
     # Iterate over all the files in the directory
-    for file_i in os.listdir(inpath):
+    for file_i in tqdm(os.listdir(inpath)):
+        print(file_i)
         # verify that file is not a directory
         if os.path.isfile(os.path.join(inpath, file_i)):
             # obtain the complete path
             complete_path = os.path.join(inpath, file_i)
-
+            print(complete_path)
             # load and trim audio to just 30 seconds
             audio = whisper.load_audio(complete_path)
             audio = whisper.pad_or_trim(audio)
@@ -41,7 +44,7 @@ def voice_to_text(inpath,outpath,model = "base",language = "english"):
             result = whisper.decode(model, mel, options)
 
             # append results to the list
-            results.append(f"{file_i} | {result.text}")
+            results.append(f"{inpath}/{file_i} | {result.text}")
             # Saving results as a txt file
     with open( outpath+ "/wavs_text.txt", "w") as file:
         for result in results:
