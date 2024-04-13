@@ -14,17 +14,18 @@ class TextMelLoader(torch.utils.data.Dataset):
         2) normalizes text and converts them to sequences of one-hot vectors
         3) computes mel-spectrograms from audio files.
     """
-    def __init__(self, audiopaths_and_text, hparams):
+    def __init__(self, audiopaths_and_text:str, text_cleaners:list,max_wav_value:float,sampling_rate:int,load_mel_from_disk:bool,filter_length:int, hop_length:int, win_length:int, n_mel_channels:int, mel_fmin:float, mel_fmax:float, seed:int):
         self.audiopaths_and_text = load_filepaths_and_text(audiopaths_and_text)
-        self.text_cleaners = hparams.text_cleaners
-        self.max_wav_value = hparams.max_wav_value
-        self.sampling_rate = hparams.sampling_rate
-        self.load_mel_from_disk = hparams.load_mel_from_disk
+
+        self.text_cleaners = text_cleaners
+        self.max_wav_value = max_wav_value
+        self.sampling_rate = sampling_rate
+        self.load_mel_from_disk = load_mel_from_disk
         self.stft = layers.TacotronSTFT(
-            hparams.filter_length, hparams.hop_length, hparams.win_length,
-            hparams.n_mel_channels, hparams.sampling_rate, hparams.mel_fmin,
-            hparams.mel_fmax)                       
-        random.seed(hparams.seed)
+            filter_length, hop_length, win_length,
+            n_mel_channels, sampling_rate, mel_fmin,
+            mel_fmax)                       
+        random.seed(seed)
         random.shuffle(self.audiopaths_and_text)
 
     def get_mel_text_pair(self, audiopath_and_text):
