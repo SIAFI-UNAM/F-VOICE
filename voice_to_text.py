@@ -1,6 +1,7 @@
 import whisper
 import os
-import tqdm
+from tqdm import tqdm  
+import tqdm as tqdm
 
 def voice_to_text(inpath,outpath,model = "base",language = "english"):
     """
@@ -25,7 +26,7 @@ def voice_to_text(inpath,outpath,model = "base",language = "english"):
     # list for saving results
     results = []
     # Iterate over all the files in the directory
-    for file_i in tqdm(os.listdir(inpath)):
+    for file_i in tqdm.tqdm(os.listdir(inpath),desc="Processing voice to text"):
         print(file_i)
         # verify that file is not a directory
         if os.path.isfile(os.path.join(inpath, file_i)):
