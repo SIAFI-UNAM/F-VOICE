@@ -1,6 +1,5 @@
 import whisper
 import os
-from tqdm import tqdm
 
 def voice_to_text(inpath,outpath,model = "base",language = "english"):
     """
@@ -24,11 +23,12 @@ def voice_to_text(inpath,outpath,model = "base",language = "english"):
     # list for saving results
     results = []
     # Iterate over all the files in the directory
-    for file_i in tqdm(os.listdir(inpath)):
+    for file_i in os.listdir(inpath):
         # verify that file is not a directory
         if os.path.isfile(os.path.join(inpath, file_i)):
             # obtain the complete path
             complete_path = os.path.join(inpath, file_i)
+
             # load and trim audio to just 30 seconds
             audio = whisper.load_audio(complete_path)
             audio = whisper.pad_or_trim(audio)
