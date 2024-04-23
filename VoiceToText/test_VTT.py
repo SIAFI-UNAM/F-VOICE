@@ -4,8 +4,8 @@ import voice_to_text as vtt
 #outpath = "C:/Users/derec/OneDrive/Escritorio/"
 
 
-inpath ="E:/Github/F-voice/F-VOICE/audio_test"
-outpath = "E:/Github/F-voice/F-VOICE"
+inpath ="E:\\wavs"
+outpath = "E:\\wavs_text"
 
 vtt.voice_to_text(inpath,outpath,language="english")
 #vtt.voice_to_text(inpath,outpath,language="spanish")
