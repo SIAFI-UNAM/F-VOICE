@@ -460,7 +460,9 @@ class Decoder(nn.Module):
 
 
 class Tacotron2(nn.Module):
-    def __init__(self,mask_padding=True,fp16_run=False, n_mel_channels=80, n_frames_per_step=1, n_symbols=256, symbols_embedding_dim=512,) :
+    def __init__(self,mask_padding=True,fp16_run=False, n_mel_channels=80,
+                  n_frames_per_step=1, n_symbols=256, 
+                  symbols_embedding_dim=512,) :
         super(Tacotron2, self).__init__()
         self.mask_padding = mask_padding
         self.fp16_run = fp16_run
