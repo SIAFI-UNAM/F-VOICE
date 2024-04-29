@@ -1,0 +1,18 @@
+
+intsallation guide:
+
+https://pytorch.org/get-started/locally/
+
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+pip install torch
+
+pip install -U openai-whisper
+
+pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+
+pip install setuptools-rust
+
+chocolate intallation: install ffmpeg
+
+
