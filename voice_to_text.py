@@ -50,3 +50,4 @@ def voice_to_text(inpath,outpath,model = "base",language = "english"):
     with open( outpath+ "/wavs_text.txt", "w") as file:
         for result in results:
             file.write(result + "\n")
+            
