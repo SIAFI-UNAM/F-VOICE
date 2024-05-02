@@ -43,6 +43,7 @@ def voice_to_text(inpath,outpath,model = "base",language = "english"):
 
                 # append results to the list
                 results.append(f"{file_i} | {result.text}")
+                
     # Saving results as a txt file
     with open( outpath+ "/wavs_text.txt", "w") as file:
         for result in results:
