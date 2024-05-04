@@ -47,5 +47,3 @@ def voice_to_text(inpath,outpath,model = "base",language = "english"):
     with open( outpath+ "/wavs_text.txt", "w") as file:
         for result in results:
             file.write(result + "\n")
-            
-voice_to_text("c:/Users/marco/Desktop/Git F-VOICE/F-VOICE/segmented_audios","c:/Users/marco/Desktop/Git F-VOICE/F-VOICE/Audio_text",model='base', language='english')
