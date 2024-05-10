@@ -23,7 +23,7 @@ def roman_to_arabic(roman_numeral):
 def normalize_text(text, language):
     """Normalize text"""
     # Remove all special characters but !¡ and ?¿
-    text = re.sub(r"([^a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ ,¡!¿?])", "", text)
+    text = re.sub(r"([^a-zA-Z0-9 ,¡!¿?])", "", text)
     # identify and normalize arabic numbers
     if language == 'es':
         text = ' '.join([num2words(word.replace(',', ''), lang='es') if word.replace(',', '').isdigit() else word for word in text.split()])
@@ -34,7 +34,7 @@ def normalize_text(text, language):
 
 def normalize_txt(input_file, output_file, language):
     # Open txt file
-    with open(input_file, "r", encoding="latin1") as file:
+    with open(input_file, "r", encoding="utf-8") as file:
         lines = file.readlines()
 
     # List to store the updated lines
@@ -54,7 +54,7 @@ def normalize_txt(input_file, output_file, language):
         updated_lines.append(new_line)
 
     # Write the updated lines to the file
-    with open(output_file, "w") as updated_file:
+    with open(output_file, "w", encoding="utf-8") as updated_file:
         updated_file.writelines(updated_lines)
 
     updated_file_path = os.path.abspath(output_file)
