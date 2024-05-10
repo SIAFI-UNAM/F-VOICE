@@ -10,24 +10,18 @@ from TTS.tts.models.tacotron2 import Tacotron2
 from TTS.tts.utils.text.tokenizer import TTSTokenizer
 from TTS.utils.audio import AudioProcessor
 
-
-
-
 # we use the same path as this script as our training folder.
-output_path = os.path.dirname("E:/Github/F-voice/F-VOICE/F-VOICE-1/checkpoints/")
+output_path = os.path.dirname("E:\\checkpoints\\")
+print(output_path)
 
-# DEFINE DATASET CONFIG
-# Set LJSpeech as our target dataset and define its path.
-# You can also use a simple Dict to define the dataset and pass it to your custom formatter.
 dataset_config = BaseDatasetConfig(
-    formatter="ljspeech", meta_file_train="metadata.csv", path=os.path.join(output_path, "E:\coqui-ai-TTS\LJSpeech-1.1")
+    formatter="ljspeech", meta_file_train="metadata.csv", path=os.path.join(output_path, "E:\\data_set_1")
 )
-
 
 audio_config = BaseAudioConfig(
     sample_rate=22050,
     do_trim_silence=True,
-    trim_db=60.0,
+    # trim_db=60.0,
     signal_norm=False,
     mel_fmin=0.0,
     mel_fmax=8000,
@@ -36,7 +30,6 @@ audio_config = BaseAudioConfig(
     ref_level_db=20,
     preemphasis=0.0,
 )
-
 
 
 # INITIALIZE THE TRAINING CONFIGURATION
@@ -70,7 +63,6 @@ config = Tacotron2Config(  # This is the config that is saved for the future use
     output_path=output_path,
     datasets=[dataset_config],
 )
-
 
 
 
