@@ -23,7 +23,7 @@ def roman_to_arabic(roman_numeral):
 def normalize_text(text, language):
     """Normalize text"""
     # Remove all special characters but !¡ and ?¿
-    text = re.sub(r"([^a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ ,¡!¿?])", "", text)
+    text = re.sub(r"([^a-zA-Z0-9 ,¡!¿?])", "", text)
     # identify and normalize arabic numbers
     if language == 'es':
         text = ' '.join([num2words(word.replace(',', ''), lang='es') if word.replace(',', '').isdigit() else word for word in text.split()])
