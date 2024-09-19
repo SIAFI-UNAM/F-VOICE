@@ -16,8 +16,7 @@ _valid_symbol_set = set(valid_symbols)
 
 class Spanish_CMUDict:
     """Creates a dictionary mapping from a Spanish word to its ARPAbet pronunciations."""
-
-    def __init__(self, file_or_path=None, keep_ambiguous=True):
+    def __init__(self, file_or_path, keep_ambiguous=True):
         # Load the CMUDict dictionary from file.
         if isinstance(file_or_path, str):
             with open(file_or_path, encoding="utf-8") as f:
@@ -35,7 +34,10 @@ class Spanish_CMUDict:
 
     def lookup(self, word):
         """Returns list of ARPAbet pronunciations of the given word."""
-        return self._entries.get(word.upper())
+        word = word.lower()  # Convierte la palabra a minúsculas
+        #print(f"Buscando la palabra: {word}")  # Depuración
+        #print(f"Palabras disponibles en el diccionario: {list(self._entries.keys())[:10]}")  # Muestra algunas palabras
+        return self._entries.get(word)
 
 # Regular expression matching an apostrophe followed by a number (e.g. '10')
 _alt_re = re.compile(r"\([0-9]+\)")
