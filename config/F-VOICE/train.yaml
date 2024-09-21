@@ -1,0 +1,20 @@
+path:
+  ckpt_path: "./output/ckpt/Fvoice"
+  log_path: "./output/log/Fvoice"
+  result_path: "./output/result/Fvoice"
+optimizer:
+  batch_size: 8 #Reuce batch size for small GPU
+  betas: [0.9, 0.98]
+  eps: 0.000000001
+  weight_decay: 0.0 #if we see a overfitting problem, we can aument the weight decay
+  grad_clip_thresh: 1.0
+  grad_acc_step: 2 #simulate a large batch size
+  warm_up_step: 1000 #Like we are using a pre-trained model, we dont need to have a lot of steps to warm up
+  anneal_steps: [300000, 400000, 500000]
+  anneal_rate: 0.3
+step:
+  total_step: 150000 #Reduce the training steps 
+  log_step: 100
+  synth_step: 500 #Reduce the synth steps
+  val_step: 500 #Reduce the validation steps
+  save_step: 10000 #Reduce the saving steps
