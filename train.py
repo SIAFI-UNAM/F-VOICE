@@ -40,6 +40,21 @@ def main(args, configs):
     # Prepare model
     model, optimizer = get_model(args, configs, device, train=True)
     model = nn.DataParallel(model)
+
+
+    #freeze encoder parameters
+    for param in model.module.encoder.parameters():
+        param.requires_grad = False
+    
+    #freeze pitch and energy embeddings
+    model.module.variance_adaptor.pitch_embedding.weight.requires_grad = False
+    model.module.variance_adaptor.energy_embedding.weight.requires_grad = False
+
+
+    # All the parameters of the model are going to be optimized for spanish, the rest will be frozen, because
+    # we only train the parts of the model that extract the voice characteristics.
+
+
     num_param = get_param_num(model)
     Loss = FastSpeech2Loss(preprocess_config, model_config).to(device)
     print("Number of FastSpeech2 Parameters:", num_param)
