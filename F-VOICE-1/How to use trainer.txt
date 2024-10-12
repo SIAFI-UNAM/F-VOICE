@@ -1,5 +1,0 @@
-Entrnar y cargar modelo pre-entrenado
-!CUDA_VISIBLE_DEVICES="0" python (archivo .py de entenamiento) --restore_path (archivo .pth del modelo pre-entrenado)  --config_path (config.json del ultimo chekpoint)
-
-enrenar desde el ultimo checkpoint 
-!CUDA_VISIBLE_DEVICES="0" python (archivo .py de entenamiento)  --restore_path (checkpoint de entrenamiento) --config_path (config.json del ultimo chekpoint)
