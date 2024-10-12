@@ -4,7 +4,7 @@ path:
   corpus_path: "" #corpus path (text)
   lexicon_path: "" #Not neccesary for spanish
   raw_path: "" #audios .wav 
-  preprocessed_path: "" #processed audios,text,textgrid and spectograms
+  preprocessed_path: "C:\\Users\\derec\\OneDrive\\Documents\\F-VOICE\\preprocessed_data\\LJSpeech" #processed audios,text,textgrid and spectograms
 
 preprocessing:
   val_size: 200   # validation set size (it has to be between 5% or 10% of sataset)

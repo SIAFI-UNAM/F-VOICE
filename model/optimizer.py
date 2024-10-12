@@ -8,7 +8,7 @@ class ScheduledOptim:
     def __init__(self, model, train_config, model_config, current_step):
 
         self._optimizer = torch.optim.Adam(
-            model.parameters(),
+            filter(lambda p: p.requires_grad, model.parameters()),  # just train parameters with grad=True
             betas=train_config["optimizer"]["betas"],
             eps=train_config["optimizer"]["eps"],
             weight_decay=train_config["optimizer"]["weight_decay"],
