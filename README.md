@@ -21,7 +21,10 @@ Con estas mejoras, VITS2 establece un nuevo estándar en modelos de síntesis de
 - [VITS2 p0p4k](https://github.com/p0p4k/vits2_pytorch)
 
 ## **Requisitos Previos**  
-    En este caso, se considera que no entrenaras el modelo como tal, solo haras inferencia, para su uso de forma local, aun que podrias intentar usarlo en un Colab (no se a testeado)
+En este caso, se considera que no entrenaras el modelo como tal, 
+solo haras inferencia, para su uso de forma local, podrias intentar usarlo en un Colab (no se a testeado).
+*Te recomiendo crees un ambiente virtual *
+
 1. **Python** >= 3.10  
 2. **PyTorch** versión 2.3.0.  
 3. Clonar este repositorio.
@@ -42,11 +45,12 @@ cd monotonic_align
 python setup.py build_ext --inplace
 
 ```
-8. Para poder usar el modelo actual usa el notebook de inferencia, ahi encontraras el prototipo, los modelos los podras encontrar en el siguiente drive [Modelos](https://drive.google.com/drive/folders/1GDOh8VqPcJNO-0dKtMc_B5dAoU-0p9Ht?usp=sharing).
-(De momento dentro de la carpeta AMA esta el modelo entrenado, lo descargar y lo pones en la carpeta de modelos, no lo subo directo al repositorio debido a su peso)
+8. Para poder usar el modelo actual usa el notebook de inference.ipynb, ahi encontraras el prototipo, los modelos los podras encontrar en el siguiente drive [Modelos](https://drive.google.com/drive/folders/1GDOh8VqPcJNO-0dKtMc_B5dAoU-0p9Ht?usp=sharing).
+(De momento dentro de la carpeta AMA esta el modelo entrenado, lo descargas y creas una crapeta nueva que se llame *models+ y ahi colocas el modelo, no lo subo directo al repositorio debido a su peso)
 
 ### ToDos
 1. Interfaz grafica.
-2. Catalogo mas aplio de voces.
-3. Voz de lengua originaria.
-4. LLM para chateo con voz.
+2. Video tutorial de uso tanto para entrenamiento como inferencia.
+3. Catalogo mas aplio de voces.
+4. Voz de lengua originaria.
+5. LLM para chateo con voz.
