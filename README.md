@@ -1,4 +1,4 @@
-# VITS2: VITS2: Mejora de la Calidad y Eficiencia en Síntesis de Voz en una Sola Etapa mediante Aprendizaje Adversarial y Diseño Arquitectónico
+# VITS2: Mejora de la Calidad y Eficiencia en Síntesis de Voz en una Sola Etapa mediante Aprendizaje Adversarial y Diseño Arquitectónico
 ## Jungil Kong, Jihoon Park, Beomjeong Kim, Jeongmin Kim, Dohee Kong, Sangjin Kim
 
 Implementación no oficial del artículo [VITS2 paper](https://arxiv.org/abs/2307.16430), secuela del artículo original [VITS paper](https://arxiv.org/abs/2106.06103). 
