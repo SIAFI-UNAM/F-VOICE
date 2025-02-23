@@ -46,7 +46,7 @@ python setup.py build_ext --inplace
 
 ```
 8. Para poder usar el modelo actual usa el notebook de inference.ipynb, ahi encontraras el prototipo, los modelos los podras encontrar en el siguiente drive [Modelos](https://drive.google.com/drive/folders/1GDOh8VqPcJNO-0dKtMc_B5dAoU-0p9Ht?usp=sharing).
-(De momento dentro de la carpeta AMA esta el modelo entrenado, lo descargas y creas una crapeta nueva que se llame *models+ y ahi colocas el modelo, no lo subo directo al repositorio debido a su peso)
+(De momento dentro de la carpeta AMA esta el modelo entrenado, lo descargas y creas una crapeta nueva que se llame **models** y ahi colocas el modelo, no lo subo directo al repositorio debido a su peso)
 
 ### ToDos
 1. Interfaz grafica.
