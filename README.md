@@ -41,6 +41,7 @@ apt-get install espeak
 7. Ejecunta el siguiente comando para poder compilar la libreria de *monotonic_align*
 ```sh
 # Cython-version Monotonoic Alignment Search
+mkdir monotonic_align
 cd monotonic_align
 python setup.py build_ext --inplace
 
