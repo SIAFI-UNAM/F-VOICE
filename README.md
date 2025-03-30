@@ -34,13 +34,14 @@ pip install -r requirements.txt
 ```
 5. Nececitas instalar Espeak, en el caso de Linux es sencillo, solo debes usar el siguiente comando. Sin embargo para Windows, recomendamos altamente el siguiente tutorial [Tutorial](https://www.youtube.com/watch?v=BBlivx6o0WM)
 ```sh 
-apt-get install espeak
+apt-get install espeak-ng
 ```
 6. Para windows igualmente se deben descargar las herramientas de desarrolo de Visual Studio, en especifico *Desarrollo para el escritorio con C++* que podras encontrar en [Visual studio](https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false)
 
 7. Ejecunta el siguiente comando para poder compilar la libreria de *monotonic_align*
 ```sh
 # Cython-version Monotonoic Alignment Search
+mkdir monotonic_align
 cd monotonic_align
 python setup.py build_ext --inplace
 
