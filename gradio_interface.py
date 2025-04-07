@@ -90,6 +90,7 @@ def inference(device, model, prompt):
     audio = (hps.data.sampling_rate, audio)
     return audio
 
+
 def get_text(text, hps):
     text_norm = text_to_sequence(text, hps.data.text_cleaners)
     if hps.data.add_blank:
@@ -99,6 +100,7 @@ def get_text(text, hps):
 
 
 # USER INTERFACE
+
 class FVoiceTheme(gr.themes.Soft):  # Subclase personalizada del tema base
     def __init__(self):
         super().__init__(
@@ -125,7 +127,7 @@ bg_color = """
 }
 """
 
-# Ruta de assets (icono de F-VOICE)
+# Ruta de assets (para icono de F-VOICE)
 gr.set_static_paths(paths=[Path.cwd().absolute()/"assets"])
 
 with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=bg_color) as demo:
