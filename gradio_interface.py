@@ -1,17 +1,14 @@
+import FVoiceTheme
+
 import gradio as gr
-import matplotlib.pyplot as plt
-import IPython.display as ipd
 
 from pathlib import Path
 import torch
-from torch import nn
-from torch.nn import functional as F
-from torch.utils.data import DataLoader
 
 import commons
 import utils
 import logging
-logging.getLogger().setLevel(logging.INFO)
+logging.getLogger().setLevel(logging.INFO)  # Eliminacion de logs no deseados
 
 from data_utils import (
     TextAudioLoader,
@@ -19,11 +16,9 @@ from data_utils import (
     TextAudioSpeakerLoader,
     TextAudioSpeakerCollate,
 )
-from models import SynthesizerTrn
-from text.symbols import symbols
-from text import text_to_sequence
 
-from scipy.io.wavfile import write
+from models import SynthesizerTrn
+from text import text_to_sequence
 
 
 def inference(device, model, prompt):
@@ -45,7 +40,7 @@ def inference(device, model, prompt):
         n_layers=6,
         kernel_size=3,
         p_dropout=0.1,
-        resblock="1", 
+        resblock="1",
         resblock_kernel_sizes=[3, 7, 11],
         resblock_dilation_sizes=[[1, 3, 5], [1, 3, 5], [1, 3, 5]],
         upsample_rates=[8, 8, 2, 2],
@@ -104,25 +99,11 @@ def get_text(text, hps):
 
 # USER INTERFACE
 
-class FVoiceTheme(gr.themes.Soft):  # Subclase personalizada del tema base
-    def __init__(self):
-        super().__init__(
-            primary_hue=gr.themes.Color(
-                c50="#FFE3D8", c100="#E3B6B1", c200="#845162", c300="#522C5D",
-                c400="#29104A", c500="#29104A", c600="#522C5D", c700="#522C5D", c800="#845162", c900="#E3B6B1", c950="#FFE3D8"
-            )
-        )
-
-
-# Instanciacion el tema personalizado
-fvoice_theme = FVoiceTheme()
+# Instanciacion del tema personalizado
+fvoice_theme = FVoiceTheme.FVoiceTheme()
 
 # CSS personalizado
-bg_color = """
-.gradio-container {
-    background: #150016
-}
-
+css = """
 #logo-header {
     display: flex;
     align-items: center;
@@ -151,8 +132,8 @@ bg_color = """
 # Ruta de assets (para icono de F-VOICE)
 gr.set_static_paths(paths=[Path.cwd().absolute()/"assets"])
 
-
-with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=bg_color) as demo:
+# Intefaz con gradio blocks
+with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=css) as demo:
     gr.HTML("""
     <div id="logo-header">
         <div style="display: flex; align-items: center; gap: 10px;">
@@ -162,8 +143,7 @@ with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=bg_color) as demo:
         <a id="about-btn" href="https://github.com/SIAFI-UNAM/F-VOICE" target="_blank">Acerca de</a>
     </div>
     <div id="about-text" style="display:none; padding: 10px; color: #FFE3D8; font-size: 16px;">
-        <strong>F-VOICE</strong> es un sistema TTS (Text-to-Speech) que utiliza modelos neuronales avanzados
-        para sintetizar audio a partir de texto, replicando características vocales aprendidas.
+        <strong>F-VOICE</strong> es un sistema TTS (Text-to-Speech) que utiliza modelos neuronales avanzados para sintetizar audio a partir de texto, replicando características vocales aprendidas.
     </div>
     <script>
     document.getElementById("about-btn").onclick = function() {
@@ -179,7 +159,8 @@ with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=bg_color) as demo:
             device = gr.Dropdown(["cuda", "cpu"], label="Procesamiento")
             btn = gr.Button("Generar")
         with gr.Column():
-            gr.Markdown("""
+            gr.Markdown(
+            """
             ## F-VOICE es ...
 
             IA TTS que, a partir de un audio y del texto asociado a este, replicará las características del audio en cada letra.
@@ -196,4 +177,3 @@ with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=bg_color) as demo:
     btn.click(fn=inference, inputs=[device, model, prompt], outputs=audio)
 
 demo.launch()
-
