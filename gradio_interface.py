@@ -1,12 +1,9 @@
+import FVoiceTheme
+
 import gradio as gr
-import matplotlib.pyplot as plt
-import IPython.display as ipd
 
 from pathlib import Path
 import torch
-from torch import nn
-from torch.nn import functional as F
-from torch.utils.data import DataLoader
 
 import commons
 import utils
@@ -17,10 +14,7 @@ from data_utils import (
     TextAudioSpeakerCollate,
 )
 from models import SynthesizerTrn
-from text.symbols import symbols
 from text import text_to_sequence
-
-from scipy.io.wavfile import write
 
 
 def inference(device, model, prompt):
@@ -42,7 +36,7 @@ def inference(device, model, prompt):
         n_layers=6,
         kernel_size=3,
         p_dropout=0.1,
-        resblock="1", 
+        resblock="1",
         resblock_kernel_sizes=[3, 7, 11],
         resblock_dilation_sizes=[[1, 3, 5], [1, 3, 5], [1, 3, 5]],
         upsample_rates=[8, 8, 2, 2],
@@ -101,25 +95,10 @@ def get_text(text, hps):
 
 # USER INTERFACE
 
-class FVoiceTheme(gr.themes.Soft):  # Subclase personalizada del tema base
-    def __init__(self):
-        super().__init__(
-            primary_hue=gr.themes.Color(
-                c50="#FFE3D8", c100="#E3B6B1", c200="#845162", c300="#522C5D",
-                c400="#29104A", c500="#29104A", c600="#522C5D", c700="#522C5D", c800="#845162", c900="#E3B6B1", c950="#FFE3D8"
-            )
-        )
-
-
 # Instanciacion el tema personalizado
-fvoice_theme = FVoiceTheme()
+fvoice_theme = FVoiceTheme.FVoiceTheme()
 
-# CSS personalizado
-bg_color = """
-.gradio-container {
-    background: #150016
-}
-
+logo = """
 #logo-header {
     display: flex;
     align-items: center;
@@ -130,7 +109,7 @@ bg_color = """
 # Ruta de assets (para icono de F-VOICE)
 gr.set_static_paths(paths=[Path.cwd().absolute()/"assets"])
 
-with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=bg_color) as demo:
+with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=logo) as demo:
     gr.HTML("""
     <div id="logo-header">
         <img src='/gradio_api/file=assets/logo.webp' width='100' height='100' />
@@ -148,7 +127,7 @@ with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=bg_color) as demo:
             """
             ## F-VOICE es ...
 
-            IA TTS que, a partir de un adio y del texto asociado a este, replicará las características del audio en cada letra.
+            IA TTS que, a partir de un audio y del texto asociado a este, replicará las características del audio en cada letra.
 
             Al ingresar un texto nuevo, este será \"leído\" con la voz que se replico, dándole las características que aprendió.
             """, elem_id="descripcion")
