@@ -91,7 +91,7 @@ def inference(device, model, prompt):
 
     # retorna tupla para el bloque de audio de gradio (sample rate, audio data en np.array)
     audio = (hps.data.sampling_rate, audio)
-    return audio
+    return audio, "### Audio Generado"
 
 
 def get_text(text, hps):
@@ -161,39 +161,35 @@ with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=bg_color) as demo:
         </div>
         <a id="about-btn" href="https://github.com/SIAFI-UNAM/F-VOICE" target="_blank">Acerca de</a>
     </div>
-    <div id="about-text" style="display:none; padding: 10px; color: #FFE3D8; font-size: 16px;">
-        <strong>F-VOICE</strong> es un sistema TTS (Text-to-Speech) que utiliza modelos neuronales avanzados
-        para sintetizar audio a partir de texto, replicando características vocales aprendidas.
-    </div>
-    <script>
-    document.getElementById("about-btn").onclick = function() {
-        var about = document.getElementById("about-text");
-        about.style.display = about.style.display === "none" ? "block" : "none";
-    };
-    </script>
     """)
+
+    # Descripción principal
+    gr.Markdown("""
+    <div style='font-size:18px; line-height:1.6; color:#FFE3D8; padding: 10px 0;'>
+    <strong>F-VOICE</strong> es un sistema TTS (Text-to-Speech) que utiliza modelos neuronales avanzados
+    para sintetizar audio a partir de texto, replicando características vocales aprendidas.<br><br>
+    Al ingresar un texto nuevo, este será <em>"leído"</em> con la voz que se replicó, dándole las características que aprendió.
+    </div>
+    """)
+
+
+    # Dos columnas: Prompt (izquierda) / Modelo + Procesamiento + Botón (derecha)
     with gr.Row():
         with gr.Column():
             prompt = gr.TextArea(placeholder="Escribe tu prompt aquí ...", label="Prompt")
+        with gr.Column():
             model = gr.Dropdown(["AMA_V3.pth"], label="Modelo")
             device = gr.Dropdown(["cuda", "cpu"], label="Procesamiento")
             btn = gr.Button("Generar")
-        with gr.Column():
-            gr.Markdown("""
-            ## F-VOICE es ...
 
-            IA TTS que, a partir de un audio y del texto asociado a este, replicará las características del audio en cada letra.
+    # Audio
+    markdown_output = gr.Markdown("### Ejemplo de voz")
 
-            Al ingresar un texto nuevo, este será \"leído\" con la voz que se replico, dándole las características que aprendió.
-            """, elem_id="descripcion")
+    # Audio único (inicialmente con preview)
+    audio = gr.Audio(value="assets/preview.wav", autoplay=False, label="Voz reproducida", interactive=False)
 
-            audio = gr.Audio(elem_id="audio_output")
-
-            #Previsualización de voz
-            gr.Markdown("### Ejemplo de voz")
-            gr.Audio(value="assets/preview.wav", autoplay=False, label="Voz entrenada")
-
-    btn.click(fn=inference, inputs=[device, model, prompt], outputs=audio)
+    # Conexión botón-generación
+    btn.click(fn=inference, inputs=[device, model, prompt], outputs=[audio, markdown_output])
 
 demo.launch()
 
