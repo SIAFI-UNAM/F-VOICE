@@ -7,21 +7,25 @@ import torch
 
 import commons
 import utils
+import logging
+logging.getLogger().setLevel(logging.INFO)  # Eliminacion de logs no deseados
+
 from data_utils import (
     TextAudioLoader,
     TextAudioCollate,
     TextAudioSpeakerLoader,
     TextAudioSpeakerCollate,
 )
+
 from models import SynthesizerTrn
 from text import text_to_sequence
 
 
-def inference(device, model, prompt):
-    if device == "cuda":
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-    print("device", device)
+#def inference(device, model, prompt):
+def inference(model, prompt):
+    # if device == "cuda":
+        # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     hps = utils.get_hparams_from_file("./configs/vits2_ama.json")
 
@@ -80,9 +84,10 @@ def inference(device, model, prompt):
     with torch.no_grad():
         audio = net_g.infer(x_tst, x_tst_lengths, noise_scale=0.75, noise_scale_w=0.8, length_scale=1)[0][0, 0].data.cpu().float().numpy()
 
-    # retorna tupla para el bloque de audio de gradio (sample rate, audio data en np.array)
+    # tupla para el componente de audio de gradio (sample rate, audio data en np.array)
     audio = (hps.data.sampling_rate, audio)
-    return audio
+    # Se actualiza el audio y el encabezado de la sección
+    return audio, "### Audio Generado"
 
 
 def get_text(text, hps):
@@ -95,45 +100,63 @@ def get_text(text, hps):
 
 # USER INTERFACE
 
-# Instanciacion el tema personalizado
+# Instanciacion del tema personalizado
 fvoice_theme = FVoiceTheme.FVoiceTheme()
 
-logo = """
+# CSS personalizado
+css = """
 #logo-header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
 }
 """
 
 # Ruta de assets (para icono de F-VOICE)
 gr.set_static_paths(paths=[Path.cwd().absolute()/"assets"])
 
-with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=logo) as demo:
+# Intefaz con gradio blocks
+with gr.Blocks(title="F-VOICE", theme=fvoice_theme, css=css) as demo:
     gr.HTML("""
     <div id="logo-header">
-        <img src='/gradio_api/file=assets/logo.webp' width='100' height='100' />
-            <h1 id='F_VOICE_header' style='margin: 0; font-size:50px'>F-VOICE</h1>
+        <a href="https://github.com/SIAFI-UNAM/F-VOICE" target="_blank">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src='/gradio_api/file=assets/logo.webp' width='100' height='100' />
+                    <h1 id='F_VOICE_header' style='margin: 0; font-size:50px'>F-VOICE</h1>
+            </div>
+        </a>
     </div>
     """)
+
+    # Descripción principal
+    gr.Markdown("""
+    <div style='font-size:18px; line-height:1.6; color:#FFE3D8; padding: 10px 0;'>
+    <strong>F-VOICE</strong> es un sistema TTS (Text-to-Speech) que utiliza modelos neuronales avanzados
+    para sintetizar audio a partir de texto, replicando características vocales aprendidas.<br><br>
+    Al ingresar un texto nuevo, este será <em>"leído"</em> con la voz que se replicó, dándole las características que aprendió.
+    </div>
+    """)
+
     with gr.Row():
         with gr.Column():
             prompt = gr.TextArea(placeholder="Escribe tu prompt aquí ...", label="Prompt")
-            model = gr.Dropdown(["AMA_V3.pth"], label="Modelo")
-            device = gr.Dropdown(["cuda", "cpu"], label="Procesamiento")
-            btn = gr.Button("Generar")
         with gr.Column():
-            gr.Markdown(
-            """
-            ## F-VOICE es ...
+            model = gr.Dropdown(["AMA_V3.pth"], label="Modelo")
+            # device = gr.Dropdown(["cuda", "cpu"], label="Procesamiento")
+            btn = gr.Button("Generar")
 
-            IA TTS que, a partir de un audio y del texto asociado a este, replicará las características del audio en cada letra.
+    # Encabezado de la seccion del audio
+    markdown_output = gr.Markdown("### Ejemplo de voz")
 
-            Al ingresar un texto nuevo, este será \"leído\" con la voz que se replico, dándole las características que aprendió.
-            """, elem_id="descripcion")
+    # Audio (preview y generado)
+    audio = gr.Audio(value="assets/preview.wav", autoplay=False, label="Voz reproducida", interactive=False)
 
-            audio = gr.Audio(elem_id="audio_output")
-
-    btn.click(fn=inference, inputs=[device, model, prompt], outputs=audio)
+    # btn.click(fn=inference, inputs=[device, model, prompt], outputs=[audio, markdown_output])
+    btn.click(fn=inference, inputs=[model, prompt], outputs=[audio, markdown_output])
 
 demo.launch()
