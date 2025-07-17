@@ -1,31 +1,41 @@
 import gradio as gr
-import os
+import os, sys
+from pathlib import Path
 from core.segmentation import process_audio
 
-# ================================= ESTILO =================================
-custom_theme = gr.themes.Default(
-    primary_hue="emerald",
-    secondary_hue="gray",
-).set(
-    body_background_fill='*neutral_950',
-    button_primary_background_fill='*primary_500',
-    button_primary_text_color='white',
-    border_color_primary='*primary_300',
-    slider_color='*primary_400'
-)
+root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.insert(0, root)
 
+import FVoiceTheme
+
+
+
+# ================================= ESTILO =================================
+fvoice_theme = FVoiceTheme.FVoiceTheme()
+
+# CSS personalizado
 css = """
-footer {visibility: hidden !important}
-.upload-box {border: 2px dashed #10b981 !important; padding: 2rem}
-.result-box {border-radius: 8px !important; padding: 1.5rem}
+#logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+}
 """
+
+# Icono de F-VOICE
+gr.set_static_paths(paths=[Path.cwd().absolute()/"assets"])
 # ==========================================================================
 
 def process_interface(input_audio, output_folder, db_threshold):
     # Lógica de procesamiento (se conectará posteriormente)
     return "Procesamiento completado. Segmentos generados en: " + output_folder
 
-with gr.Blocks(theme=custom_theme, css=css) as demo:
+with gr.Blocks(theme=fvoice_theme, css=css) as demo:
     gr.Markdown("# 🎙️ F-VOICE - Segmentador de Audio")
     gr.Markdown("### Carga tus audios y genera segmentos con transcripción")
     
