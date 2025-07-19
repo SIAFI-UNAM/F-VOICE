@@ -26,7 +26,7 @@ a {
 }
 
 #logo-header img {
-    margin-right: 10px;  /* espacio entre imagen y texto */
+    margin-right: 10px;
 }
 """
 
@@ -41,9 +41,10 @@ encoded_img = imagen_base64(assets_dir / "logo.webp")
 
 # ==========================================================================
 
-def process_interface(input_audio, output_folder, db_threshold):
-    # Lógica de procesamiento (se conectará posteriormente)
-    return "Procesamiento completado. Segmentos generados en: " + output_folder
+def process_interface(input_audio, output_folder):
+    if not os.path.isdir(output_folder):
+        return f"Error: La carpeta '{output_folder}' no existe. Por favor revisa la ruta."
+
 
 with gr.Blocks(theme=fvoice_theme, css=css) as demo:
     #Logo de F-Voice y redireccionamiento al repositorio
@@ -72,7 +73,6 @@ with gr.Blocks(theme=fvoice_theme, css=css) as demo:
     </ul>
     </div>
     """)
-
     
     with gr.Row():
         with gr.Column(scale=3):
@@ -80,53 +80,34 @@ with gr.Blocks(theme=fvoice_theme, css=css) as demo:
             audio_input = gr.File(
                 file_count="multiple",
                 file_types=[".wav", ".mp3"],
-                label="Arrastra tus archivos de audio aquí",
+                label="Arrastra o selecciona tu archivo de audio desde aquí",
                 elem_classes="upload-box"
             )
             
             # Sección de configuración
             with gr.Row():
-                input_dir = gr.Textbox(
-                    label="Carpeta de entrada predeterminada",
-                    value=os.path.join("resources", "RawAudio"),
-                    interactive=False
-                )
                 
                 output_dir = gr.Textbox(
                     label="Carpeta de salida",
-                    value=os.path.join("resources", "Segments"),
-                    interactive=True
+                    value= Path(__file__).resolve().parents[1]/"app"/"resources"/"Segments",
+                    interactive=True,
+                    info="Si no eliges otra carpeta, se usará la predeterminada."
                 )
             
-            threshold_slider = gr.Slider(
-                minimum=-60, maximum=-20, value=-40,
-                label="Umbral de detección de silencios (dB)",
-                step=1
-            )
-            
-            process_btn = gr.Button("GENERAR", variant="primary")
-
-        # Sección de resultados
-        with gr.Column(scale=2, elem_classes="result-box"):
-            gr.Markdown("### Resultados")
-            output_result = gr.File(label="Segmentos generados")
-            status_output = gr.Textbox(label="Estado del proceso")
-            metadata_preview = gr.Dataframe(
-                headers=["Archivo", "Duración", "Texto"],
-                label="Vista previa de metadatos"
-            )
+            process_btn = gr.Button("SEGMENTAR AUDIO", variant="primary")
 
     # Event handlers
     process_btn.click(
         fn=process_interface,
-        inputs=[audio_input, output_dir, threshold_slider],
-        outputs=[status_output, output_result, metadata_preview]
+        inputs=[audio_input, output_dir],
+        outputs=[]
     )
 
 if __name__ == "__main__":
     demo.launch(
-        server_name="0.0.0.0",
+        server_name="127.0.0.1",
         server_port=7860,
         show_api=False,
-        favicon_path=None
+        favicon_path=None,
+        pwa=True
     )
