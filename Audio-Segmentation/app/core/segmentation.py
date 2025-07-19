@@ -181,7 +181,6 @@ class Slicer:
                 chunks.append(
                     [self._apply_slice(waveform, sil_tags[-1][1], total_frames),int(sil_tags[-1][1]*self.hop_size),int(total_frames*self.hop_size)]
                 )
-            print(f"Silencios detectados: {sil_tags}")
             return chunks
         
 def initialize_asr_pipeline(device="cpu"):
@@ -196,13 +195,20 @@ def transcribe(ref_audio, language=None):
     global asr_pipe
     if asr_pipe is None:
         initialize_asr_pipeline(device="cpu")
+    
+    if isinstance(ref_audio, str):
+        audio_array, sr = librosa.load(ref_audio, sr=16000, mono=True)
+    else:
+        audio_array = ref_audio
+
     return asr_pipe(
-        ref_audio,
+        audio_array,
         chunk_length_s=10,
         batch_size=128,
         generate_kwargs={"task": "transcribe", "language": "spanish"} if language else {"task": "transcribe"},
         return_timestamps=False,
     )["text"].strip()
+
 
 def generate_metadata(output_folder):
     metadata_path = os.path.join(output_folder, "metadata.csv")
@@ -232,7 +238,14 @@ def generate_metadata(output_folder):
 
     print(f"Metadata generada en: {metadata_path}")
 
-def process_audio(input_path, output_folder, language="spanish"):
+def process_audio(input_file, output_folder, language="spanish"):
+    initialize_asr_pipeline(device="cuda" if torch.cuda.is_available() else "cpu")
+
+    if hasattr(input_file, "name"):
+        input_path = input_file.name
+    else:
+        input_path = input_file
+    
     audio, sr = librosa.load(input_path, sr=None, mono=False)
 
     slicer = Slicer(
@@ -273,6 +286,4 @@ def process_audio(input_path, output_folder, language="spanish"):
     return transcriptions
 
 if __name__ == "__main__":
-    initialize_asr_pipeline(device="cuda" if torch.cuda.is_available() else "cpu")
-
     process_audio(input_path, output_folder, language="spanish")
