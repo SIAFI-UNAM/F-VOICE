@@ -6,7 +6,7 @@ from core.segmentation import process_audio
 root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 sys.path.insert(0, root)
 
-import FVoiceTheme
+import src.FVoiceTheme as FVoiceTheme
 
 # ================================= ESTILO =================================
 #Tema personalizado de F-Voice
@@ -31,7 +31,7 @@ a {
 """
 
 # Icono de F-VOICE
-assets_dir = Path(__file__).resolve().parents[2] / "assets"
+assets_dir = Path(__file__).resolve().parents[2] / "src/assets"
 def imagen_base64(path):
     with open(path, "rb") as img_file:
         encoded = base64.b64encode(img_file.read()).decode("utf-8")

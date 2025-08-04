@@ -1,0 +1,161 @@
+midu/wavs\vocals4_73.wav|Si eso te lo ha vivido festo, tío. ¿El efecto de fondo?
+midu/wavs\vocals4_38.wav|relevante porque el to do app tenéis que pensar que lo habéis hecho para aprender vale y esto es una cosa que vamos a ver repetida muchas veces cuando creáis aplicaciones para aprender que están bien pero sobre todo cuando estáis aprendiendo muy al principio
+midu/wavs\vocals3_11.wav|30 años, parece poco, pero casi 30 años. Y aún así, sigue evolucionando, sigue mejorando. La última versión es la 8.3.4.
+midu/wavs\vocals1_694.wav|Solidity sí que tiene mucha parte de full stack en el sentido de que hay muchas ofertas
+midu/wavs\vocals3_584.wav|Ya he tocado con el bar dump. Ay, coño.
+midu/wavs\vocals3_312.wav|Supongo que lo sabéis. Amidus, defendiendo a PHP, dámelo siempre. Sí, pero es que yo nunca tengo ningún problema con PHP. Mira, RemoteOK es solo un archivo PHP llamado index.php
+midu/wavs\vocals2_410.wav|Y esto lo vamos a hacer aquí y voy a poner que esto lo haga SVGL manual.
+midu/wavs\vocals4_254.wav|motor en granaje, que sería una extensión
+midu/wavs\vocals2_732.wav|git pool de pepito de su máster, ¿vale? y me voy a traer los cambios de pepito del máster.
+midu/wavs\vocals1_549.wav|Pero lo cierto es que se puede utilizar para cualquier lenguaje, ¿vale? No hace falta que se puedan hacer un montón de proyectos de cualquier lenguaje y hacerlo con esto.
+midu/wavs\vocals2_502.wav|FIX Accessibility Isus. Esta podría ser una forma de crear nuestra rama y esto cambiaría directamente a la rama.
+midu/wavs\vocals_230.wav|Hay un error. De hecho, yo creo que esto está mal, este RETURN FALSE, pero bueno, sí, está mal porque le falta
+midu/wavs\vocals1_487.wav|Que tenéis que saber si o si porque es que da hasta... Igual justo hoy le pedí a mis desarrolladores que quiten lo Dash-ha-ha-ha.
+midu/wavs\vocals3_187.wav|en las que te va a hacer una conversión de tipos y te va a decir vale si tienes un número y una cadena de textos y tienes una cadena de textos y un número voy a intentar hacer una conversión automática
+midu/wavs\vocals1_59.wav|está el components yo le diría mira está el components están de capa caída
+midu/wavs\vocals3_471.wav|Así que en lugar de esto que habíamos hecho aquí, lo que podías hacer es tener una lista
+midu/wavs\vocals1_237.wav|de JavaScript, pero para CSS, algo así. Hay uno que es que lo tenéis que dejar ya.
+midu/wavs\vocals2_533.wav|Y la única cosa que yo me he tomado la libertad es de cambiar este DOMEELEMENT para hacerlo más general porque ya no tendría sentido mantenerle el nombre de DIP.
+midu/wavs\vocals_312.wav|yo quitaría los callbacks y lo que haríamos directamente es aquí
+midu/wavs\vocals1_651.wav|Si fuese una guía para desarrollador móvil, pues seguramente Kotlin o Swiss, o sea, está clarísimo.
+midu/wavs\vocals2_473.wav|pero lo vamos a solucionar también. Este error viene de este iconito que tenemos aquí, este iconito de aquí.
+midu/wavs\vocals3_14.wav|pues esperaba ahora bien php porque es importante porque es interesante porque quieras o no php
+midu/wavs\vocals3_156.wav|pues esta sería nuestra primera variable y la primera variable pues ya la podríamos mostrar directamente aquí igual que habíamos puesto aquí esta cadena de texto
+midu/wavs\vocals4_223.wav|Si en cambio me dice de frente, me dice, oye, me he copiado el frontal de la de Platzi, pero toda la API lo he hecho totalmente distinto porque lo he hecho con Java, con MySQL y no sé qué, ¿sabes?
+midu/wavs\vocals3_387.wav|te va a destruir la vida porque muchas veces uno te pega un pantallazo en blanco que te va a cegar y por otro lado
+midu/wavs\vocals1_547.wav|Luego tenemos Jenkins, que se puede utilizar bastante empresarialmente. Entonces, si podéis conocerlo, pues...
+midu/wavs\vocals1_498.wav|pero luego realmente para empresas reales que tienen que hacer un montón de cosas. Pero bueno, es una alternativa, si os gusta.
+midu/wavs\vocals_319.wav|y este handle write lo quitaríamos. Y esto es lo que tendíamos ahora, ahora.
+midu/wavs\vocals1_585.wav|El 80% de los problemas, súper fácil. Os recomiendo mucho que le echéis un vistazo a esto.
+midu/wavs\vocals2_122.wav|Así que si le quieren llamar la mejor rama del mundo, le podéis llamar así. Entonces, la principal...
+midu/wavs\vocals_49.wav|Esta prueba técnica en realidad no tiene absolutamente nada de front-end. Sí que es JavaScript vanilla, es JavaScript más de palo, JavaScript sin ningún tipo de UI, y esto lo suelen hacer algunas empresas que no les interesa tanto que sepas.
+midu/wavs\vocals1_530.wav|Contract testing. Pact. Esto también os va a dar dinero. ¿Por qué? Porque este tipo de cosas marcan la diferencia. ¿Vosotros sabéis hacer este tipo de cosas?
+midu/wavs\vocals1_879.wav|y cosas así. Lo vamos a ver. Por ejemplo, Oyama, que ya es totalmente gratuito, que se puede instalar de una forma
+midu/wavs\vocals1_71.wav|¿Qué es un design system? Un design system, un sistema de diseño. Aquí lo que tendríamos, por ejemplo, Chakra UI no es como un design system.
+midu/wavs\vocals3_628.wav|A futuro vamos a ver Docker y si os gusta, haremos incluso el curso de Laravel.
+midu/wavs\vocals2_560.wav|At levels, at discernible levels.
+midu/wavs\vocals4_135.wav|una herramienta que usaría un D o un X. Os doy ejemplos.
+midu/wavs\vocals3_631.wav|Una vez que te acostumbras, yo creo que está super bonito.
+midu/wavs\vocals1_465.wav|Yo, para mí, creo que Lowdash está de capa caída. A día de hoy ya no tiene sentido.
+midu/wavs\vocals1_840.wav|pero me parece que se están marcando la diferencia. Vamos al tema de base de datos. A ver, no te abrumes, no hace falta que aprendáis todo de golpe.
+midu/wavs\vocals3_125.wav|pues podemos ver como van saliendo aquí cosas las peticiones que vamos haciendo vale nos dice que el fab icon el get cada vez que hagamos una petición lo tenemos por aquí vamos a empezar a hacer las primeras las primeras cositas
+midu/wavs\vocals1_401.wav|Hay oportunidades para todos y, si no, somos personas elásticas. ¡Nos que nacemos!
+midu/wavs\vocals1_182.wav|La diferencia que puede marcar una persona que realmente sepa hacer con CSS, animaciones con scroll,
+midu/wavs\vocals1_7.wav|para aprender y luego yo voy a poner también mis mis promesas
+midu/wavs\vocals2_428.wav|No sabemos cómo tenemos que contribuir, pero si vamos al Rhythmie sí que es verdad que normalmente tiene bastante información. Vamos a ver el Rhythmie en condiciones que no me acuerdo si es en este.
+midu/wavs\vocals3_204.wav|pero no podemos poner, no tiene un tipado completo de que en cualquier sitio lo puedes hacer. Hay en ciertos sitios, en ciertos contextos, donde sí que le puedes indicar y le puedes decir cuál es el tipo de las variables
+midu/wavs\vocals2_421.wav|y quiero que me hagas un pull de los cambios de upstream a la rama main.
+midu/wavs\vocals1_562.wav|que hagáis. Obviamente, otro que necesitáis aquí, que es clave.
+midu/wavs\vocals2_226.wav|¿Qué tienen en cuenta para que la gente pueda contribuir, incluso aunque tú no vas a contribuir nunca, para que aprendas para tus propios repositorios o tus propios proyectos?
+midu/wavs\vocals3_598.wav|¿Vale? Borde radio de 16px. ¿Vale? Ya teníamos esto. ¿Vale? A lo más pequeño. ¡Perfecto!
+midu/wavs\vocals4_212.wav|genera dudas está generando dudas de pero realmente sabe hacer lo que dice
+midu/wavs\vocals4_196.wav|se ha copiado hasta el error de postman vale pues aquí tenéis lo que tenéis que evitar también amigos
+midu/wavs\vocals3_486.wav|queremos sacar de language, queremos sacar el índice. Así que ahora ya tendríamos aquí el índice.
+midu/wavs\vocals2_200.wav|Yo he estado colaborando desde hace mucho, mucho tiempo en la web de Google Chrome, developer Chrome. No me da fama, no me dio fama, ni me dio dinero, ni nada.
+midu/wavs\vocals3_646.wav|es que no configurar nada te detecta qué lenguaje estás utilizando
+midu/wavs\vocals_327.wav|y el new way es utilizando fs.promises.readfile.
+midu/wavs\vocals4_263.wav|Tiene que ser muy buena. Yo creo que una de mis usuarios que además resuelve
+midu/wavs\vocals3_91.wav|Y si nos ponemos a mirar todos los comandos disponibles, pues hay algunos muy interesantes, como por ejemplo este.
+midu/wavs\vocals1_531.wav|¿Cómo testear con contratos de que una API no se rompa?
+midu/wavs\vocals1_800.wav|promesa que puede ser que yo le tengo más esperanzas es quick
+midu/wavs\vocals2_542.wav|Esto no está mal, no pasa nada, te quiero igual. Pero os explico por qué. Os explico por qué no van puntos, por qué no se puntúan los commits.
+midu/wavs\vocals3_150.wav|Pero bueno, hay símbolos que seguro que no lo va a aceptar. Otros que tampoco podrías aceptar.
+midu/wavs\vocals1_410.wav|era que tus páginas fuesen mucho más rápidas y que además, ves, las priorizaban las búsquedas.
+midu/wavs\vocals1_161.wav|lo está despreciando, vosotros sois donde vais ahí y marcas la diferencia. Pero bueno, yo quiero aprenderte algo en cállate.
+midu/wavs\vocals1_25.wav|yo no priorizaría una ya me la estoy diciendo incluso por el chat ok la primera que yo voy a poner
+midu/wavs\vocals2_315.wav|Así que ya veis que no tengo acceso al repositorio remoto. ¿Esto qué significa? ¿Esto significa?
+midu/wavs\vocals2_489.wav|es que entiendo que aquí vamos a ver cuáles son las dos que tienen los problemas.
+midu/wavs\vocals2_60.wav|a mí personalmente me gusta más Guija por lo que digo, pero a mí Guilla me parece igual de bueno, a mí personalmente el que menos me gusta es Big Bucket, porque no me gusta tanto la UI, la verdad.
+midu/wavs\vocals2_715.wav|Fijaos que está apuntando al mío. Por lo tanto, tenemos que añadir que apuntemos también al repositorio original para traer los cambios. ¿Cómo se hace eso?
+midu/wavs\vocals3_629.wav|curso del árabe. Y ahí sí que veremos seguramente Docker porque hay unas cuantas cosas que necesitamos. Soy la única persona que se le hace super raro leer las propiedades de una rey asociativo.
+midu/wavs\vocals4_193.wav|Olvidate eso, pero bueno igualmente se ha copiado la de Plasti, la madre que lo parió, me ha dejado por los suelos, se ha copiado la de Plasti.
+midu/wavs\vocals_288.wav|Pero ves esto que ocurre aquí de tata tata, callback, tata tata, ¿no? Y empieza a ver esto, que es como una pirámide de izquierda a derecha.
+midu/wavs\vocals2_140.wav|pero mi problema es realmente dónde contribuir. Bueno, como quiero que veáis código y tal, os voy a decir tres sitios tres sitios vale tres sitios
+midu/wavs\vocals1_822.wav|aban sería elicia. Este está pensado para van o para bon o como lo queráis decir.
+midu/wavs\vocals4_32.wav|Los proyectos son la clave. Los proyectos son los que realmente demuestran que sabes algo. Bueno, amigos, este es el típico...
+midu/wavs\vocals2_487.wav|Para tenerlo bien sería crear una rama. Hay diferentes formas de crear una rama.
+midu/wavs\vocals3_446.wav|Escríbelo, a ver cómo sale esto, porque te puedo asegurar que te va a salir mucho más código.
+midu/wavs\vocals1_512.wav|Y a partir de aquí, ¿qué es lo que puedes hacer más para tema de testing para ganar dinero? Yo, aquí una cosa importante del testing, ya sería pasar a, por ejemplo...
+midu/wavs\vocals2_656.wav|Porque ya no la vas a utilizar. Esto es lo que tú quieras. O sea, podemos hacer las dos cosas. Podríamos, por un lado,
+midu/wavs\vocals3_200.wav|que es gradual. Aparte de que PHP puede inferir el tipo de la variable,
+midu/wavs\vocals2_417.wav|Fijaos que hay una diferencia y es que me ha añadido como me está apuntando tanto para hacer fetch y push.
+midu/wavs\vocals2_622.wav|Feralp hasta que la pasemos a que realmente deja de ser draft. Digamos que es un borrador, ¿vale?
+midu/wavs\vocals3_666.wav|Hoy, sin ir más lejos, pa que os hagáis una idea, hoy me ha escrito un chico.
+midu/wavs\vocals2_259.wav|pero he encontrado algún problema es un proyecto que me gusta mucho pero qué pasa pues que visitándolo dicho ostras
+midu/wavs\vocals2_2.wav|como adivinaste que soy programadora al ver mi baño esto que se parece se parece mucho no es mi baño eh mucha gente se ha creído que realmente es mi baño no es mi baño para la gente que no ha pillado el chiste vale que hay mucha gente que no ha pillado el chiste no pasa nada que no hayas pillado el chiste no pasa nada que no hayas pillado el chiste, no pasa nada.
+midu/wavs\vocals_18.wav|y la idea es que toques JavaScript, JavaScript, Fronten, Vanilla
+midu/wavs\vocals1_145.wav|yo creo que te puede quitar oportunidades y de la misma forma yo creo que a día de hoy uno
+midu/wavs\vocals3_485.wav|Podemos aquí poner aquí y una row function. Bueno, no es una row function, es una row y ya está. Pero sería el simbolito de la root function de JavaScript. En este caso, lo que estamos haciendo aquí es una flechita y le indicamos
+midu/wavs\vocals_419.wav|caso 2, que sería con el async, que aunque nosotros no lo veamos, que vaya más rápido.
+midu/wavs\vocals2_16.wav|y ya está. Entonces, ¿por qué es importante contribuir? También te voy a enseñar cómo puedes contribuir y dónde encontrar esas contribuciones, ¿vale? Así que lo vamos a ver. Y dice, ¿el libro resulta útil también para aquellos que ya tenemos experiencia un glit mira adrian yo creo
+midu/wavs\vocals_222.wav|Promises.tes.js y claro, tarda dos segundos y ahora aparece dos veces el datos importante porque
+midu/wavs\vocals3_10.wav|PHP nació el año 1995, o sea, que tiene casi
+midu/wavs\vocals3_435.wav|mayor o igual de 40, eres un adulto viejo, ¿vale? Y si no estás, estás, estás, estás, estás casi, casi ya...
+midu/wavs\vocals1_638.wav|o sea esto es una no es una lista de
+midu/wavs\vocals1_747.wav|Capa caída a mí personalmente y espero que la gente me perdone vale
+midu/wavs\vocals_106.wav|Aquí entonces ya veo dos cosas. El primero, que como se está utilizando no es lo mismo.
+midu/wavs\vocals2_231.wav|es ok de tener pequeños commits. Tienes que asegurarte que los test pasen. No te preocupes.
+midu/wavs\vocals1_123.wav|que no todo lo demás así que que os suene para mejorar vuestra empleabilidad vale ya lo hemos dejado aquí design systems y sobre todo
+midu/wavs\vocals2_280.wav|No os preocupéis porque esta es la huella digital pública. Esto es normal. La privada no es visible. Así que no os preocupéis.
+midu/wavs\vocals2_780.wav|y crear la rama changeRimmi y aquí vamos a fix
+midu/wavs\vocals1_719.wav|Pero, aunque es el octavo, fijaos que tiene un 2% de ofertas. Se han encontrado 58.000.
+midu/wavs\vocals3_353.wav|Me he cambiado. Vamos a poner el output. Otra vez aquí, output.
+midu/wavs\vocals_302.wav|Lo malo. A ver, esto a veces tiene sentido en funciones que sean muy sencillas y os puede simplificar bastante el código.
+midu/wavs\vocals_394.wav|¿Por qué? Porque hace el readFileSync, este y este. Entonces hace esto, bloquea todo, esto, esto y luego
+midu/wavs\vocals_111.wav|En este caso es súper, súper típico que este reto de aquí, esto.
+midu/wavs\vocals1_460.wav|no tiene nociones de promoción pero también es verdad que por suerte se ha visto una frenada vale o sea ya no está creciendo, como estaba creciendo antiguamente.
+midu/wavs\vocals1_396.wav|No, no, tenemos que hacer aquí unas puertas para que no entre nadie, porque así no. O sea, lo que hay que hacer aquí es demostrar y punto.
+midu/wavs\vocals4_66.wav|O sea, es más importante la pokeapi que nada. La nada no asuma.
+midu/wavs\vocals2_9.wav|y vamos a ayudarle vale le vamos a hacer una pr y te voy a enseñar cómo hacerlo paso a paso para que no tenga ningún problema las diferentes formas de hacerlo porque toda la forma de hacerlo está bien la estrategia para tener éxito vale que esto es muy importante porque la gente se cree que todo siempre es código pero no siempre es código cuando programamos. También cuando programamos es importante la comunicación, el mensaje, cómo lo hacemos. Todo eso es súper importante. Te voy a enseñar también.
+midu/wavs\vocals_388.wav|arregla los test si es necesario. Mira, voy a explicar este. Este es muy fácil, pero también tienes que entender por qué se hace. O sea, no solo es arreglarlo, sino que es entender el por qué.
+midu/wavs\vocals2_369.wav|del fork, tú puedes hacer que vaya a donde tú quieras, lo importante es que tengan sentido esos cambios que quieras integrar a otro sitio.
+midu/wavs\vocals1_254.wav|cliente particular. Y a lo mejor puedes crear un mini backend que esté pensado específicamente para la web, otro para mobile y cosas así.
+midu/wavs\vocals1_13.wav|dedicarle tiempo yo voy a dar mi opinión sincera mi opinión personal vale que nadie se me enfade por favor que nadie se me enfade luego con el máximo cariño yo no
+midu/wavs\vocals4_210.wav|¿Por qué? Pues porque amigos, que no son las copias baratas. ¿Qué significa una copia barata? Una copia barata...
+midu/wavs\vocals3_597.wav|os lo dejo. De hecho, aquí es que se me ha escapado aquí. Aquí no he puesto esto de aquí.
+midu/wavs\vocals2_778.wav|Enfima ha detectado que necesita Node y está instalando Node. Es increíble code spaces.
+midu/wavs\vocals1_304.wav|Mira, me encontré este tweet y es que estoy totalmente de acuerdo. Flavio dice...
+midu/wavs\vocals2_496.wav|que sea, le podríamos poner link label y si no que sea link name, al menos para que tenga el link label de los dos.
+midu/wavs\vocals3_401.wav|Pero no en todos los sitios está el match, que es mejor, superior, más bonito, más joven, más hermoso.
+midu/wavs\vocals_387.wav|Esto pregunta mucho y además creo que tiene trampa. ¿Cómo mejoraría ese siguiente código y por qué?
+midu/wavs\vocals2_384.wav|Feralb no se hace responsable, ¿vale? Eso es la limitación que tiene, pero aquí tienen los permisos y los permisos son bastante bestias.
+midu/wavs\vocals3_128.wav|como me dé la gana. Vamos a ponerle que tenga un modo oscuro. Vamos a poner aquí que nos centre todo el contenido.
+midu/wavs\vocals2_677.wav|ya lo tenía, ¿vale? O sea, es una rama que me he traído cuando he hecho el fork. Entonces, por eso pone dos branches, pero no es la mía, sino es una que ya tenía Feralpantes.
+midu/wavs\vocals_229.wav|o el contenido. Si tengo un error, voy a avisar de que leyendo este archivo...
+midu/wavs\vocals2_232.wav|por el estilo del código. Mira, anda que no hay veces que me han echado y me han funado.
+midu/wavs\vocals1_792.wav|El tema de los decoradores, el tema de las clases, es verdad que está basado en webcomponents, pero al final no deja de ser también una biblioteca que está por encima, que a la idea
+midu/wavs\vocals1_38.wav|que crece su adopción. ¿Entendemos? Como que poco a poco vamos a ver que va decreciendo.
+midu/wavs\vocals2_527.wav|para cambiar la rama y crearla a la vez. O sea que puedes hacer las dos cosas en un solo
+midu/wavs\vocals1_221.wav|Por ejemplo, para hacer nested, a ver si encuentro que tenía por aquí un artículo.
+midu/wavs\vocals_131.wav|esto os daría yo creo que del punto os daría la mitad porque ojo cuidado
+midu/wavs\vocals_38.wav|y tenemos que ver cómo podemos mejorar esto. La 5 es bastante sencilla, que es escribir una función delay
+midu/wavs\vocals2_306.wav|modificado el archivo RIMMI, GIT status, el estado es que hemos modificado este archivo, lo vamos a añadir.
+midu/wavs\vocals3_354.wav|comparaciones de que sean así mayor que igual que si es una igualdad podéis también incluso hacer que
+midu/wavs\vocals_234.wav|entonces lo que hace es, después de que pase un segundo, porque esto está milisegundo,
+midu/wavs\vocals1_141.wav|Si tengo que priorizar entre todos, entre uno CSS, el otro que nunca acuerdo como se llama, que seguro que Feral si que se acuerda, que tiene muy buena pinta.
+midu/wavs\vocals3_496.wav|de PHP este creo que también tenemos. PHP Actors también, o sea que tiene sub diferentes de tanto para hacer un pa te complete el código como que también para que te lo formate. Incluso hay algunos que te hacen refactos automáticos.
+midu/wavs\vocals3_136.wav|porque la gente mezclaba mucho HTML, con JavaScript, con PHP, inyectaba el código,
+midu/wavs\vocals2_603.wav|Y sus accesibilidad lo que toman, lo que toman, ¿verdad? ¿Acesibilidad? A ver, que no veo.
+midu/wavs\vocals1_27.wav|pero yo no lo priorizaría de ser lo primero que aprendería que a día de hoy mucha gente todavía lo pone como
+midu/wavs\vocals1_529.wav|Testing de contratos, de APIs, de contratos, también. Testing de APIs, de contratos, API, contract.
+midu/wavs\vocals3_659.wav|O sea, ya veis que en un momentito podéis desplegar un proyecto de PHP
+midu/wavs\vocals2_500.wav|Estaba en 80 y algo, ¿vale? Entonces, ¿qué tenemos que hacer? Lo primero es crear una rama.
+midu/wavs\vocals_50.wav|del framework en concreto porque al final si sabes de vanilla pues no debería costar mucho y aquí lo que mira mucho es que se pasa sin cronía lo que esperan en esta prueba, si lo fijáis, lo que esperan es
+midu/wavs\vocals1_767.wav|Podemos poner como promesa futura, si os parezca. Uy, va simple. Pero a ver, ¿qué podéis utilizar? ¿Qué podéis utilizar? 5x sin ningún problema. Eso es lo que yo no lo priorizaría.
+midu/wavs\vocals1_565.wav|y que al final os explico estrategias y tal. No os quiero vender el libro. Hay un libro gratuito.
+midu/wavs\vocals4_143.wav|que realmente es un error común que mucha gente tiene. Y entonces mira, bueno claro, pero esto ya está creado. Es que hay un montón de ideas.
+midu/wavs\vocals2_759.wav|Me quiero quitar los cambios, pero bueno, da igual. No pasa nada. Quería enseñar otra cosa, pero no va.
+midu/wavs\vocals1_97.wav|sus componentes y os voy a enseñar como es verdad lo que os estoy diciendo porque a mejor alguien me dice
+midu/wavs\vocals_460.wav|Bueno, mira, ya tenía nombre, o sea que lo vamos a poner con el mismo nombre.
+midu/wavs\vocals2_795.wav|¿Veis qué pone aquí? Abrir con guijas de esto. Si os cuesta todo el tema de la terminal o lo que sea, es una aplicación de escritorio que está bastante chula.
+midu/wavs\vocals2_819.wav|Shorts 3 hace mucho tiempo.
+midu/wavs\vocals1_754.wav|Yo no veo que vayan crechendo o que yo priorizaría. A mí me dicen, oye, ¿hoy qué aprendo? Firebase o SuperBase?
+midu/wavs\vocals1_187.wav|Vale, lo que quiero decir con arquitectura CSS, aquí estamos hablando de sueldo, o sea gente que ya sepa por lo que sea
+midu/wavs\vocals3_224.wav|que estás en un entorno de producción y que nunca escupes los errores para que la gente los vea porque es una fuente de problemas y por lo que sea tienes un error en los datos
+midu/wavs\vocals3_611.wav|Con esto ya podemos quitar esto que no necesitamos más.
+midu/wavs\vocals4_14.wav|Ya sabéis que en el Discord, muchas veces lo que hacemos, tu web a juicio. Aquí, tu web a juicio. Este. Entonces, lo voy a abrir un ratito.
+midu/wavs\vocals3_171.wav|dinámico, débil y gradual, ojo y gradual, esto es muy interesante y es que es tipado dinámico porque no es necesario declarar el tipo de la variable.
+midu/wavs\vocals3_338.wav|en medio porque es muy fácil que lo dupliqueis en cualquier sitio. Así que aquí tendríamos esto y como hemos dicho antes que aquí.
+midu/wavs\vocals2_607.wav|Lo bueno de haber creado ramas y todo esto es que ahora podemos volver a main.
+midu/wavs\vocals3_441.wav|y podríamos decirle que si tenemos 40 y 48, pues ya
+midu/wavs\vocals_274.wav|la extensión, ¿vale? Y con esto ahora sí que debería estar bien. Vamos a ejecutarlo.
