@@ -210,33 +210,33 @@ def transcribe(ref_audio, language=None):
     )["text"].strip()
 
 
-def generate_metadata(output_folder):
-    metadata_path = os.path.join(output_folder, "metadata.csv")
-    wav_files = []
-    for filename in os.listdir(output_folder):
-        if filename.endswith(".wav"):
-            parts = filename.rsplit("_", 1)
-            number = int(parts[1].split(".")[0])
-            wav_files.append((number, filename))
+def generate_metadata(segment_paths, output_folder, base_name):
+    metadata_path = os.path.join(output_folder, f"{base_name}_metadata.csv")
+    transcriptions_list = []
     
-    wav_files.sort(key=lambda x: x[0])
-    
+    for wav_path in segment_paths:
+        file_id = os.path.splitext(os.path.basename(wav_path))[0]
+        txt_path = wav_path.replace(".wav", ".txt")
+        
+        if os.path.exists(txt_path):
+            with open(txt_path, "r", encoding="utf-8") as f:
+                transcription = f.read().strip()
+        else:
+            transcription = "ERROR_EN_TRANSCRIPCION"
+        
+        parts = file_id.rsplit("_", 1)
+        number = int(parts[1])
+        transcriptions_list.append((number, file_id, transcription))
+        
+    transcriptions_list.sort(key=lambda x: x[0])
+
     with open(metadata_path, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile, delimiter="|")
         
-        for number, filename in wav_files:
-            file_id = os.path.splitext(filename)[0]
-            txt_path = os.path.join(output_folder, f"{file_id}.txt")
-            
-            if os.path.exists(txt_path):
-                with open(txt_path, "r", encoding="utf-8") as f:
-                    transcription = f.read().strip()
-            else:
-                transcription = "ERROR_EN_TRANSCRIPCION"
-            
+        for number, file_id, transcription in transcriptions_list:
             writer.writerow([file_id, transcription, transcription])
 
-    print(f"Metadata generada en: {metadata_path}")
+    print(f"Metadata generada para '{base_name}' en: {metadata_path}")
 
 def process_audio(input_file, output_folder, language="spanish"):
     initialize_asr_pipeline(device="cuda" if torch.cuda.is_available() else "cpu")
@@ -281,7 +281,7 @@ def process_audio(input_file, output_folder, language="spanish"):
         except Exception as e:
             print(f"Error al transcribir el segmento {i}: {str(e)}")
     
-    generate_metadata(output_folder)
+    generate_metadata(segment_paths, output_folder, base_name)
     print(f"Transcripciones completadas")
     return transcriptions
 
