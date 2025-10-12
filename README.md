@@ -128,8 +128,7 @@ Desde `src/`, usa el módulo `import onnx`.
 
 ## ToDos
 
-1. Interfaz gráfica
-2. Video tutorial de uso
+1. Video tutorial de uso
 3. Catálogo más amplio de voces
 4. Voces en lenguas originarias
 5. Integración con LLM para chat con voz
