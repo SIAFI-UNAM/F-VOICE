@@ -66,8 +66,7 @@ with gr.Blocks(theme=fvoice_theme, css=css) as demo:
     gr.Markdown("""
     <div style='font-size:18px; line-height:1.6; color:#FFE3D8; padding: 10px 0;'>
     Bienvenido al segmentador de audio de <strong>F‑VOICE</strong>.  
-    Arrastra aquí un archivo en formato <em>.wav</em>,  
-    o selecciona la carpeta de tu dispositivo que contenga los audios.  
+    Arrastra aquí un archivo en formato <em>.wav</em> o <em>.mp3<em>.  
     <br><br>
     Una vez cargados, obtendrás:
     <ul>
